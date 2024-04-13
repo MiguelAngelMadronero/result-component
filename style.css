@@ -205,6 +205,16 @@ body{
     padding: 12px;
     border-radius: 40px;
     text-align: center;
+    transition: background 0.3s ease;
+}
+
+.card__continue:hover{
+    background: linear-gradient(to top, var(--Light-royal-blue-background), var(--Light-slate-blue-background)) ;
+    transition: background 0.3s ease;
+}
+
+.card__continue:not(:hover){
+    transition: background 0.3s ease;
 }
 
 @media(min-width:768px){
