@@ -200,21 +200,47 @@ body{
 .card__continue{
     text-decoration: none;
     color: var(--White);
-    background-color: var(--Dark-gray-blue);
+    background: var(--Dark-gray-blue);
+    background-image: linear-gradient(var(--Dark-gray-blue), var(--Dark-gray-blue)) ;
+
+    /* background: black; */
     width: 100%;
     padding: 12px;
     border-radius: 40px;
     text-align: center;
-    transition: background 0.3s ease;
+    /* transition: all 2s ease-in-out ; */
 }
 
-.card__continue:hover{
-    background: linear-gradient(to top, var(--Light-royal-blue-background), var(--Light-slate-blue-background)) ;
-    transition: background 0.3s ease;
+
+
+
+
+.card__continue {
+    position: relative;
+    background-image: linear-gradient(var(--Dark-gray-blue), var(--Dark-gray-blue)) ;
+
+    
 }
 
-.card__continue:not(:hover){
-    transition: background 0.3s ease;
+.card__continue:after {
+    content: 'Continue';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    background-image: linear-gradient(to top, var(--Light-royal-blue-background), var(--Light-slate-blue-background)) ;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card__continue:hover:after {
+    opacity: 1;
 }
 
 @media(min-width:768px){
